@@ -1,0 +1,21 @@
+{
+  "xsappname": "TechEdLCAP010",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.TechEdLCAP010Manager",
+      "description": "TechEdLCAP010Manager"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "TechEdLCAP010Manager",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.TechEdLCAP010Manager"
+      ],
+      "attribute-references": []
+    }
+  ]
+}

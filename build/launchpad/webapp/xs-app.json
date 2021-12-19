@@ -1,0 +1,49 @@
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout",
+    "logoutPage": "/logout.html"
+  },
+  "routes": [
+    {
+      "source": "^/cnsumer/(.*)$",
+      "target": "/cnsumer/$1",
+      "destination": "TechEdLCAP010-app-srv",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/service/TechEdLCAP010/(.*)$",
+      "target": "/service/TechEdLCAP010/$1",
+      "destination": "TechEdLCAP010-app-srv",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/consumer/(.*)$",
+      "target": "/consumer/$1",
+      "destination": "TechEdLCAP010-app-srv",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/index.html$",
+      "target": "/index.html",
+      "service": "html5-apps-repo-rt",
+      "cacheControl": "no-cache, no-store, must-revalidate",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/logout.html$",
+      "target": "/logout.html",
+      "service": "html5-apps-repo-rt",
+      "cacheControl": "no-cache, must-revalidate",
+      "authenticationType": "none"
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "cacheControl": "no-cache, must-revalidate",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}
